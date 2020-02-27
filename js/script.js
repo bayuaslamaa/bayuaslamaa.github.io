@@ -4,11 +4,12 @@ const score = document.querySelector('.score')
 const shotgun = document.querySelector('#shotgun')
 const quack = document.querySelector('#quack')
 
+let highestScore;
 let rumputPrevious;
 let selesai;
 let skor;
 
-alert('Kamu akan memainkan sebuah game tembektu: tembak bebek itu, klik "Tembak!" untuk memulai')
+// alert('Kamu akan memainkan sebuah game tembektu: tembak bebek itu, klik "Tembak!" untuk memulai')
 
 function randomGrass(rumput) {
     const r = Math.floor(Math.random() * rumput.length);
@@ -27,7 +28,7 @@ let randomTime = function (min, max) {
 
 function showDuck() {
     const rRandom = randomGrass(rumput)
-    const tRandom = randomTime(500, 1000);
+    const tRandom = randomTime(400, 650);
     rRandom.classList.add('timbul');
 
 
@@ -40,6 +41,8 @@ function showDuck() {
     }, tRandom);
 }
 
+let timeTotal = prompt("Masukan waktu bermain dalam detik:", 5)
+
 let startTheGame = function () {
     selesai = false;
     skor = 0;
@@ -48,14 +51,16 @@ let startTheGame = function () {
     setTimeout(() => {
         selesai = true;
         alert(`SELAMAT SCORE ANDA ${score.textContent}`)
-    }, 7000)
+
+    }, timeTotal * 1000)
 }
 
 let shot = function () {
+    shotgun.play();
     skor++
     this.parentNode.classList.remove('timbul');
-    shotgun.play();
     score.textContent = skor;
+
 }
 
 bebek.forEach(b => {
