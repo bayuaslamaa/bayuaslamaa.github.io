@@ -1,11 +1,14 @@
 const rumput = document.querySelectorAll('.rumput');
 const bebek = document.querySelectorAll('.bebek');
 const score = document.querySelector('.score')
+const shotgun = document.querySelector('#shotgun')
+const quack = document.querySelector('#quack')
 
 let rumputPrevious;
 let selesai;
 let skor;
 
+alert('Kamu akan memainkan sebuah game tembektu: tembak bebek itu, klik "Tembak!" untuk memulai')
 
 function randomGrass(rumput) {
     const r = Math.floor(Math.random() * rumput.length);
@@ -24,27 +27,33 @@ let randomTime = function (min, max) {
 
 function showDuck() {
     const rRandom = randomGrass(rumput)
-    const tRandom = randomTime(100, 600);
+    const tRandom = randomTime(500, 1000);
     rRandom.classList.add('timbul');
 
+
     setTimeout(() => {
+        quack.play()
         rRandom.classList.remove('timbul');
-        showDuck();
+        if (!selesai) {
+            showDuck();
+        }
     }, tRandom);
 }
 
 let startTheGame = function () {
     selesai = false;
     skor = 0;
+    score.textContent = 0
     showDuck()
     setTimeout(() => {
         selesai = true;
-    }, 15000)
+    }, 5000)
 }
 
 let shot = function () {
     skor++
     this.parentNode.classList.remove('timbul');
+    shotgun.play();
     score.textContent = skor;
 }
 

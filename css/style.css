@@ -1,14 +1,25 @@
-h1,
+/* @import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playball&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Stalinist+One&display=swap');
+
+body {
+    background-color: greenyellow;
+}
+
+
+h3,
 h2 {
     font-size: 90px;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Stalinist One;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .penampung {
     width: 600px;
     margin: auto;
-    cursor: crosshair;
+    cursor: url(../img/target.png), auto;
 }
 
 button {
