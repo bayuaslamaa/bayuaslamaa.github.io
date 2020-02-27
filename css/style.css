@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Stalinist+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 
 body {
-    background-color: #e1a95f;
+    background-image: url(../img/background.jpg);
+    background-size: 100% 100%;
+
 }
 
 h2 {
     font-family: Press Start 2P;
+    border: 10px double black;
+    width: 130px;
+    margin: auto;
+    color: whitesmoke;
+    background-color: #8e8e8e;
 }
 
 h3 {
     font-family: Stalinist One;
+}
+
+h2,
+p {
+    font-family: Orbitron;
+}
+
+p {
+    font-size: 35px;
+    text-align: center;
 }
 
 h3,
@@ -29,14 +47,16 @@ h2 {
 
 button {
     background-color: #4CAF50;
+    font-family: Stalinist One;
     border: none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: block;
     font-size: 16px;
     margin: auto;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
