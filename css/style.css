@@ -1,4 +1,5 @@
-h1 {
+h1,
+h2 {
     font-size: 90px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -6,6 +7,12 @@ h1 {
 
 .penampung {
     width: 600px;
+    margin: auto;
+    cursor: crosshair;
+}
+
+button {
+    display: block;
     margin: auto;
 }
 
