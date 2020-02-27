@@ -47,7 +47,8 @@ let startTheGame = function () {
     showDuck()
     setTimeout(() => {
         selesai = true;
-    }, 5000)
+        alert(`SELAMAT SCORE ANDA ${score.textContent}`)
+    }, 7000)
 }
 
 let shot = function () {
