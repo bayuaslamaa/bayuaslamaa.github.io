@@ -3,8 +3,13 @@
 
 body {
     background-image: url(../img/background.jpg);
-    background-size: 100% 100%;
+    background-size: 100% 110%;
 
+}
+
+body#index1 {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
 }
 
 h2 {
@@ -43,6 +48,10 @@ h2 {
     width: 800px;
     margin: auto;
     cursor: url(../img/target.png), auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
