@@ -1,0 +1,18 @@
+h1 {
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.penampung {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.rumput {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
