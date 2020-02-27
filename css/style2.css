@@ -19,7 +19,7 @@ body#index1 {
 h2 {
     font-family: Press Start 2P;
     border: 10px double black;
-    width: 130px;
+    width: 100px;
     margin: auto;
     color: whitesmoke;
     background-color: #8e8e8e;
@@ -50,7 +50,7 @@ h2 {
 }
 
 .penampung {
-    width: 800px;
+    width: 900px;
     margin: auto;
     cursor: url(../img/target.png), auto;
 }
@@ -76,8 +76,8 @@ button {
 }
 
 .rumput {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     position: relative;
     overflow: hidden;
     float: left;
@@ -86,8 +86,8 @@ button {
 .rumput::after {
     content: '';
     display: block;
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     background: url(../img/grass.png) bottom center no-repeat;
     background-size: 80%;
     position: absolute;
