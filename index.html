@@ -8,53 +8,28 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="index1">
     <h3>TEMBEKTU</h3>
     <p>Tembak Bebek Itu</p>
-    <button type="button" class="mulai" onclick="startTheGame()">Tembak!</button>
-    <h2 class="score">0</h2>
-    <div class="penampung">
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
-        <div class="rumput">
-            <div class="bebek"></div>
-        </div>
+    <p class="level">Pilih Level :</p>
+    <a href="./easy.html"><button type="button" class="mulai"> Easy</button></a>
+    <a href="./hard.html"><button type="button" class="mulai"> Hard</button></a>
+    <!-- <h2 class="score">0</h2> -->
+    <div class="panduan">
+        <p>Pada game ini, anda akan dihadapkan kepada 2 level game yaitu easy dan hard. Waktu default untuk masing-
+            masing level adalah 15 detik.
+            Rules: Anda harus memenangkan level easy dengan syarat minimal mendapatkan 10
+            Bebek untuk dapat melanjutkan ke level Hard dan mendapatkan 5 Bebek untuk dapat memenangkan game ini.
+            Anda bisa merubahnya untuk latihan, tapi anda tidak bisa menjadi pemenang
+            dengan waktu yang diganti. Anda diperbolehkan untuk langsung memainkan level Hard jika anda bisa HAHAHA!
+        </p>
+    </div>
+
 
     </div>
     <audio src="./audio/gun.mp3" id="shotgun"></audio>
     <audio src="./audio/quack.mp3" id="quack"></audio>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>

@@ -3,13 +3,14 @@ const bebek = document.querySelectorAll('.bebek');
 const score = document.querySelector('.score')
 const shotgun = document.querySelector('#shotgun')
 const quack = document.querySelector('#quack')
+const hard = document.querySelector('.mulaiHard')
+const easy = document.querySelector('.mulaiEasy')
 
-let highestScore;
 let rumputPrevious;
 let selesai;
 let skor;
 
-// alert('Kamu akan memainkan sebuah game tembektu: tembak bebek itu, klik "Tembak!" untuk memulai')
+alert('Kamu akan memainkan sebuah game tembektu: tembak bebek itu, klik "Start!" untuk memulai')
 
 function randomGrass(rumput) {
     const r = Math.floor(Math.random() * rumput.length);
@@ -26,11 +27,17 @@ let randomTime = function (min, max) {
     return Math.ceil(Math.random() * (max - min) + min)
 }
 
+let tRandom;
+
 function showDuck() {
     const rRandom = randomGrass(rumput)
-    const tRandom = randomTime(400, 650);
     rRandom.classList.add('timbul');
 
+    if (hard) {
+        tRandom = randomTime(400, 650)
+    } else if (easy) {
+        tRandom = randomTime(1500, 2100);
+    }
 
     setTimeout(() => {
         quack.play()
@@ -41,7 +48,8 @@ function showDuck() {
     }, tRandom);
 }
 
-let timeTotal = prompt("Masukan waktu bermain dalam detik:", 5)
+
+let timeTotal = prompt("Masukan waktu bermain dalam detik:", 15)
 
 let startTheGame = function () {
     selesai = false;
@@ -50,15 +58,24 @@ let startTheGame = function () {
     showDuck()
     setTimeout(() => {
         selesai = true;
-        alert(`SELAMAT SCORE ANDA ${score.textContent}`)
+        alert(`SCORE ANDA ${score.textContent}`)
+        if (score.textContent > 10 && easy && timeTotal === 15) {
+            if (window.confirm("Lanjut Level Hard?")) {
+                window.open("hard.html", "_self")
+            }
+        } else {
+            if (score.textContent >= 5 && timeTotal === 15) {
+                window.alert("Selamat, kamu layak berburu!")
+            }
+        }
+
 
     }, timeTotal * 1000)
 }
-
 let shot = function () {
     shotgun.play();
-    skor++
     this.parentNode.classList.remove('timbul');
+    skor++
     score.textContent = skor;
 
 }
@@ -66,3 +83,22 @@ let shot = function () {
 bebek.forEach(b => {
     b.addEventListener('click', shot);
 })
+
+function startTimer(duration, display) {
+    let timer = duration,
+        seconds;
+    setInterval(function () {
+        seconds = parseInt(timer % 60, 10);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = 0 + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    display = document.querySelector('#time');
+    startTimer(timeTotal, display);
+};
