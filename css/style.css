@@ -4,7 +4,7 @@
 
 body {
     background-image: url(../img/background.jpg);
-    background-size: 100% 110%;
+    background-size: 100% 130%;
 
 }
 
@@ -12,6 +12,7 @@ body {
 body#index1 {
     background-image: url(../img/background.jpg);
     background-size: cover;
+    font-size: 90px;
 }
 
 
@@ -25,7 +26,8 @@ h2 {
     background-color: #8e8e8e;
 }
 
-h3 {
+h3,
+p.level {
     font-family: Stalinist One;
 }
 
@@ -40,9 +42,17 @@ p {
     margin-top: 0;
 }
 
+div.panduan p {
+    font-size: 30px;
+    text-align: justify;
+    width: 85%;
+    margin: auto;
+    margin-top: 70px;
+}
+
 h3,
 h2 {
-    font-size: 90px;
+    font-size: 70px;
     text-align: center;
 
     margin-top: 0;
@@ -73,6 +83,12 @@ button {
     margin-bottom: 10px;
     cursor: url(../img/target.png), auto;
 
+}
+
+button.mulai a {
+    cursor: url(../img/target.png), auto;
+    height: 100%;
+    width: 100%;
 }
 
 .rumput {

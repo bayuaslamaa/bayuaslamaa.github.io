@@ -11,7 +11,8 @@
 <body>
     <h3>TEMBEKTU</h3>
     <p>Tembak Bebek Itu</p>
-    <button type="button" class="mulaiEasy" onclick="startTheGame()">Tembak!</button>
+    <div>Time Remain <span id="time"></span></div>
+    <button type="button" class="mulaiEasy" onclick="startTheGame()">Start!</button>
     <h2 class="score">0</h2>
     <div class="penampung">
         <div class="rumput">
@@ -28,6 +29,7 @@
         </div>
 
     </div>
+
     <audio src="./audio/gun.mp3" id="shotgun"></audio>
     <audio src="./audio/quack.mp3" id="quack"></audio>
     <script src="js/script.js"></script>

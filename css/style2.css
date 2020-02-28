@@ -4,7 +4,8 @@
 
 body {
     background-image: url(../img/background.jpg);
-    background-size: 100% 110%;
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
 
 }
 
@@ -42,7 +43,7 @@ p {
 
 h3,
 h2 {
-    font-size: 90px;
+    font-size: 70px;
     text-align: center;
 
     margin-top: 0;
