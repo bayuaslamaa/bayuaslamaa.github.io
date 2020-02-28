@@ -9,6 +9,17 @@ body {
 
 }
 
+div#timer,
+span#time {
+    border: 2px double black;
+    color: black;
+    font-size: 25px;
+    font-family: Orbitron;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 270px
+}
 
 body#index1 {
     background-image: url(../img/background.jpg);
