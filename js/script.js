@@ -56,6 +56,8 @@ let startTheGame = function () {
     skor = 0;
     score.textContent = 0
     showDuck()
+    display = document.querySelector('#time');
+    startTimer(timeTotal, display);
     setTimeout(() => {
         selesai = true;
         alert(`SCORE ANDA ${score.textContent}`)

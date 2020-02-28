@@ -50,6 +50,18 @@ div.panduan p {
     margin-top: 70px;
 }
 
+div#timer,
+span#time {
+    border: 2px double black;
+    color: black;
+    font-size: 25px;
+    font-family: Orbitron;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 270px
+}
+
 h3,
 h2 {
     font-size: 70px;
